@@ -9,3 +9,7 @@ lazy variant of filter
 leading generator is followed by other generator
 
 generator, deiliter as enter and ;
+
+method, map, flatmap, and filter
+for a type for expression
+usefull? array iterator, xml, optional value, parses
