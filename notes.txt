@@ -1,0 +1,11 @@
+
+==== week 1 =====
+for(x <- e1 if f;y <- e2 if 
+distinct works on all sequences
+
+map and flatmap bisa di convert kedalam for
+lazy variant of filter
+
+leading generator is followed by other generator
+
+generator, deiliter as enter and ;
