@@ -1,4 +1,24 @@
 
+=== week 2 ====
+proofing
+    - P(l)
+    - Sn..Sx
+    - proof P(Sn)..P(Sx)
+    - pilih satu law, and proof kalau itu correct
+Stream
+    - List but evaluated on demand
+    - avoid computing the tail, until needed
+    - Stream.cons(1, Stream.cons(2, Stream.empty))
+    - Stream, not yet generated, kalau di stuktur bakalan kosongan
+    - x #:: xs == Stream.cons(x,xs)
+lazy evaluation
+    - sieve erothotenes
+    - sieve erothenesnes :
+        prime(s:Stream):
+            
+
+
+
 ==== week 1 =====
 for(x <- e1 if f;y <- e2 if 
 distinct works on all sequences
@@ -13,3 +33,49 @@ generator, deiliter as enter and ;
 method, map, flatmap, and filter
 for a type for expression
 usefull? array iterator, xml, optional value, parses
+
+- for expression not tied to collections
+random value generator,
+random value for other domain? string, boolean and such
+
+trait Generator[+T]{
+    def generate:T
+}
+
+val integers = new Generator[Int]{
+    val rand 
+}
+
+map, flatmap, convert dari for
+
+
+def map[T,U](f:(T)=>U)
+
+case class Tree
+
+monad:
+map and flatpmap
+
+monad: 
+tipe data yang punya satu method flatMap dan unit
+dan perlu memenuhi beberapa kandidat
+
+trait M[T] {
+    def flatMap(f:T=>M[U]):M[U]
+    def unit(t:T):M[T]
+}
+
+flatmap as bind
+list,set, some, single adalah monad
+
+map adalah kombinasi dari flatmap dan unit
+
+m map f = m flatMap( x=> unit(f(x) ) )
+
+apply f function and the apply the unit function
+monad dan monoid
+
+m flatmap f flatmap g == m flatmap ( x=> f(x) flatmap g)
+unit(x) flatmap f == f(x)
+m flatmap unit =  m
+
